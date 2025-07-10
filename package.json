@@ -1,0 +1,37 @@
+{
+  "name": "passportxsocketio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "start": "node dist/index.js",
+    "dev": "nodemon src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "express-async-handler": "^1.2.0",
+    "express-session": "^1.18.1",
+    "express-validator": "^7.2.1",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "@types/cors": "~2.8.19",
+    "@types/express": "~5.0.3",
+    "@types/express-session": "~1.18.2",
+    "@types/passport": "~1.0.17",
+    "@types/passport-local": "~1.0.38",
+    "concurrently": "^9.2.0",
+    "nodemon": "^3.1.10",
+    "tsx": "^4.20.3",
+    "typesync": "^0.14.3"
+  }
+}
