@@ -44,6 +44,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
+const __htmlFiles = join(__dirname, "html");
 
 passport.use(
   new localStrategy((username, password, done) => {
@@ -71,14 +72,14 @@ app.get("/", (req, res) => {
   if (!req.user) {
     return res.redirect("/login");
   }
-  res.sendFile(join(__dirname, "index.html"));
+  res.sendFile(join(__htmlFiles, "index.html"));
 });
 
 app.get("/login", (req, res) => {
   if (req.user) {
     return res.redirect("/");
   }
-  res.sendFile(join(__dirname, "login.html"));
+  res.sendFile(join(__htmlFiles, "login.html"));
 });
 
 app.post(

@@ -1,8 +1,8 @@
 {
 	"watch": ["src"],
 	"ext": "ts",
-	"exec": "concurrently 'npx tsc --watch' 'npx tsx src/index.ts'",
+	"exec": "concurrently \"npx tsc --watch\" \"npx tsx src/index.ts\"",
 	"events": {
-		"restart": "cp -r ./src/*.html ./dist/"
+		"restart": "node -e \"require('fs').cpSync('./src/html', './dist/html', {recursive: true});\""
 	}
 }	
